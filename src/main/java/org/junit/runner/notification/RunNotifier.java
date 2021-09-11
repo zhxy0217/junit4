@@ -16,6 +16,9 @@ import org.junit.runner.Result;
  * move {@link #fireTestRunStarted(Description)} and {@link #fireTestRunFinished(Result)}
  * to a separate class since they should only be called once per run.
  *
+ * <p>如果你要书写自定义运行器，你需要通知JUnit你的测试进程。你可以通过调用传递给{@link org.junit.runner.Runner#run(RunNotifier)}
+ * 方法的<code>RunNotifier</code>的相应方法来实现事件通知（如测试开始、结束、失败等）。
+ *
  * @since 4.0
  */
 public class RunNotifier {
